@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">m.helper</string>
+    <string name="photo">добавить фото</string>
+    <string name="name">Почта</string>
+    <string name="Password">Пароль</string>
+    <string name="PasswordCheck">Подтвердите пароль</string>
+    <string name="EmailOrPhone">Email</string>
+    <string name="ruleForStickingPhoto">для регистраций вы должны прикрепить фотографию \n \n
+на вашей фотографий должны присутствовать вы и ваше удостоверение личности</string>
+    <string name="ruleForRecoverPassword">мы отправили на ваш номер 4 значный код , введите его</string>
+    <string name="getFourNumberCode">код</string>
+    <string name="headerNewPasswordCreate">Востановление \n пароля</string>
+    <string name="newPassword">Новый пароль</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="checkToTest">1000</string>
+</resources>

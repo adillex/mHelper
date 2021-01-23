@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ChineseLang"
+        android:title="中文"
+        />
+    <item
+        android:id="@+id/EnglishLang"
+        android:title="English"
+        />
+    <item
+        android:id="@+id/SpanishLang"
+        android:title="Español"
+        />
+    <item
+        android:id="@+id/FrenchLang"
+        android:title="français"
+        />
+    <item
+        android:id="@+id/ArabLang"
+        android:title="عرب"
+        />
+    <item
+        android:id="@+id/RussianLang"
+        android:title="Русский"
+        />
+    <item
+        android:id="@+id/PortugueseLang"
+        android:title="Português"
+        />
+    <item
+        android:id="@+id/GermanLang"
+        android:title="Deutsche"
+        />
+
+
+</menu>

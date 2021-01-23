@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainNavDrawer"
+    app:startDestination="@id/mainMapFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/mainMapFragment"
+        android:name="com.adillex.mhelper.MainMapFragment"
+        android:label="MainMapFragment"
+        tools:layout="@layout/fragment_main_map">
+        <action
+            android:id="@+id/action_mainMapFragment_to_eventShowFragment"
+            app:destination="@id/eventShowFragment" />
+        <argument
+            android:name="eventId"
+            android:defaultValue="null" />
+    </fragment>
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.adillex.mhelper.myAccountFragment"
+        android:label="myAccountFragment"
+        tools:layout="@layout/fragment_my_account">
+        <action
+            android:id="@+id/action_myAccountFragment_to_usersEventsFragment"
+            app:destination="@id/usersEventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.adillex.mhelper.settingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/addWorkFragment"
+        android:name="com.adillex.mhelper.newEventCreateFragment"
+        android:label="fragment_add_work"
+        tools:layout="@layout/fragment_new_event_create" >
+        <action
+            android:id="@+id/action_addWorkFragment_to_extraCharacteristicsFragment"
+            app:destination="@id/extraCharacteristicsFragment" />
+        <argument
+            android:name="exCharect"
+            app:argType="com.adillex.mhelper.ExCharecteristecs" />
+        <action
+            android:id="@+id/action_addWorkFragment_to_mainMapFragment"
+            app:destination="@id/mainMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.adillex.mhelper.groupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group" />
+    <fragment
+        android:id="@+id/extraCharacteristicsFragment"
+        android:name="com.adillex.mhelper.extraCharacteristicsFragment"
+        android:label="extraCharacteristicsFragment"
+        tools:layout="@layout/fragment_extra_characteristics">
+        <action
+            android:id="@+id/action_extraCharacteristicsFragment_to_newEventCreaterFragment"
+            app:destination="@id/addWorkFragment" />
+        <argument
+            android:name="exChar"
+            app:argType="com.adillex.mhelper.ExCharecteristecs" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersEventsFragment"
+        android:name="com.adillex.mhelper.UsersEventsFragment"
+        android:label="fragment_users_events"
+        tools:layout="@layout/fragment_users_events" >
+        <action
+            android:id="@+id/action_usersEventsFragment_to_myAccountFragment"
+            app:destination="@id/myAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventShowFragment"
+        android:name="com.adillex.mhelper.EventShowFragment"
+        android:label="EventShowFragment"
+        tools:layout="@layout/fragment_event_show" >
+        <action
+            android:id="@+id/action_eventShowFragment_to_mainMapFragment"
+            app:destination="@id/mainMapFragment" />
+        <action
+            android:id="@+id/action_eventShowFragment_to_myAccountFragment"
+            app:destination="@id/myAccountFragment" />
+    </fragment>
+</navigation>

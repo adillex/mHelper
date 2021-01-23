@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "802916888543",
+    "firebase_url": "https://mhelper-c14a5.firebaseio.com",
+    "project_id": "mhelper-c14a5",
+    "storage_bucket": "mhelper-c14a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802916888543:android:65660b113135dedece9e6a",
+        "android_client_info": {
+          "package_name": "com.adillex.mhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "802916888543-ut4rc921ens5634mr0kjsak52m5j44jo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adillex.mhelper",
+            "certificate_hash": "58195372b52b0ca11251a3fea5dd80ce06e40480"
+          }
+        },
+        {
+          "client_id": "802916888543-2hltg2ur0vdgf1ge0b0u05p89vcua1v8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAojNit1Su0ZRDNZuwL7itNcECunwHbsVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802916888543-2hltg2ur0vdgf1ge0b0u05p89vcua1v8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

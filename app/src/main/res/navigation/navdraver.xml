@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navdraver"
+    tools:ignore="UnusedNavigation"
+    app:startDestination="@id/LogInFragment">
+
+    <fragment
+        android:id="@+id/newCreaterFragment"
+        android:name="com.adillex.mhelper.NewCreaterFragment"
+        android:label="fragment_new_creater"
+        tools:layout="@layout/fragment_new_creater" >
+        <action
+            android:id="@+id/action_newCreaterFragment_to_LogInFragment"
+            app:destination="@id/LogInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LogInFragment"
+        android:name="com.adillex.mhelper.registrationFragment"
+        android:label="registrationFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_LogInFragment_to_newCreaterFragment"
+            app:destination="@id/newCreaterFragment" />
+        <action
+            android:id="@+id/action_LogInFragment_to_passwordRecoveryStartFragment"
+            app:destination="@id/passwordRecoveryStartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/passwordRecoveryStartFragment"
+        android:name="com.adillex.mhelper.PasswordRecoveryStartFragment"
+        android:label="fragment_password_recovery_start"
+        tools:layout="@layout/fragment_password_recovery_start" >
+        <action
+            android:id="@+id/action_passwordRecoveryStartFragment_to_LogInFragment"
+            app:destination="@id/LogInFragment" />
+    </fragment>
+
+</navigation>

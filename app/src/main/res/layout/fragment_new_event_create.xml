@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        tools:context=".newEventCreateFragment">
+
+        <EditText
+            android:id="@+id/worksNameET"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Введите название"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline42"
+            app:layout_constraintStart_toStartOf="@+id/guideline44"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/descriptionET"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.8"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Введите описание"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textAllCaps="true"
+            tools:layout_editor_absoluteX="391dp"
+            tools:layout_editor_absoluteY="146dp" />
+
+        <Button
+            android:id="@+id/creatWorkB"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.1"
+            android:text="создать"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline43"
+            app:layout_constraintEnd_toStartOf="@+id/guideline42"
+            app:layout_constraintStart_toStartOf="@+id/guideline44"
+            app:layout_constraintTop_toTopOf="@+id/guideline48" />
+
+
+    </LinearLayout>
+</layout>
