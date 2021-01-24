@@ -24,20 +24,15 @@ class RaitingBarActivity : AppCompatActivity() {
         myRef = database!!.getReference("events")
         myRefUser = database!!.getReference("users")
         binding?.getRatingButtonVery?.setOnClickListener {
-            val numStar = binding?.ratingBar?.numStars
-            val eventid = intent.getStringExtra("eventid")
+            val numStar = binding?.ratingBar?.rating
+            event = intent.getSerializableExtra("event") as Event?
 
-            myRef?.child(eventid!!)?.addListenerForSingleValueEvent(object : ValueEventListener{
-                override fun onCancelled(p0: DatabaseError) {
+            uid = event?.responds
 
-                }
-
-                override fun onDataChange(p0: DataSnapshot) {
-                    event = p0.getValue(Event::class.java)
-                    uid = event?.responds
-                }
-
-            })
+            myRef?.child(event?.eventId!!)?.child("star")?.setValue(numStar)
+            event?.eventId?.let { it1 ->
+                myRefUser?.child(event?.userId!!)?.child("events")?.child(it1)?.child("star")?.setValue(numStar)
+            }
 
             myRefUser?.child(uid!!)?.addListenerForSingleValueEvent(object: ValueEventListener{
                 override fun onCancelled(p0: DatabaseError) {
@@ -48,11 +43,10 @@ class RaitingBarActivity : AppCompatActivity() {
                     val user = p0.getValue(User::class.java)
                     val num = user?.starNum
                     val star = user?.stars
-                    val total = num!!.times(star!!).plus(numStar!!).div(numStar+1)
-                    user.stars = total
-                    user.starNum = num.plus(1)
-
-                    myRefUser?.child(uid!!)?.setValue(user)
+                    val total = (num!!.times(star!!).plus(numStar!!)).div(num.plus(1))
+                    myRefUser?.child(uid!!)?.child("stars")?.setValue(total)
+                    myRefUser?.child(uid!!)?.child("starNum")?.setValue(num.plus(1))
+                    finish()
             }
         })
         }

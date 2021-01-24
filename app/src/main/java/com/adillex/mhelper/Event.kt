@@ -14,5 +14,5 @@ class Event: Serializable {
     var usermail: String? = null
     var userId: String? = null
     var eventId: String? = null
-    var star: Int? = null
+    var star: Float? = null
 }

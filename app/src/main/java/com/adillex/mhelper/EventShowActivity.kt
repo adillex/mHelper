@@ -83,7 +83,7 @@ class EventShowActivity : AppCompatActivity() {
 //                            numArray = myRefUser?.child(mAuth?.uid!!)?.child("stars") as Array<Int>
 //                        }
                         val intent = Intent(this@EventShowActivity, RaitingBarActivity::class.java)
-                        intent.putExtra("eventid", eventId)
+                        intent.putExtra("event", event)
                         startActivity(intent)
                         finish()
                     }
@@ -92,6 +92,22 @@ class EventShowActivity : AppCompatActivity() {
                     binding?.headerWorkingStatus?.text = "завершен"
                     binding?.klick?.visibility = View.GONE
                     binding?.klickOut?.visibility = View.GONE
+                    binding?.ratingBar?.visibility = View.VISIBLE
+                    event?.star?.let {star->
+                        binding?.ratingBar?.rating = star
+                    }
+                    binding?.LinearResponded?.visibility = View.VISIBLE
+                    myRefUser?.child(event?.responds!!)?.addListenerForSingleValueEvent(object: ValueEventListener{
+                        override fun onCancelled(p0: DatabaseError) {
+
+                        }
+
+                        override fun onDataChange(p0: DataSnapshot) {
+                            val user = p0.getValue(User::class.java)
+                            binding?.headerResponded?.text = user?.name
+                        }
+                    })
+
                 }
             }
 

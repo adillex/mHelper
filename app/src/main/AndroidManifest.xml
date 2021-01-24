@@ -22,7 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RaitingBarActivity"></activity>
+        <activity android:name=".HelpMapActivity"></activity>
+        <activity android:name=".RaitingBarActivity" />
         <activity android:name=".EventShowActivity" />
         <activity android:name=".recyclerViewActivity" />
 
