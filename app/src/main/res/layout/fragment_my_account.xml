@@ -89,8 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/colorWhite"
+                android:background="@drawable/border_green"
                 android:padding="8dp"
                 android:text="активные события" />
 
@@ -99,8 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/colorWhite"
+                android:background="@drawable/border_green"
                 android:padding="8dp"
                 android:text="законченные события" />
 
@@ -109,8 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/colorWhite"
+                android:background="@drawable/border_green"
                 android:padding="8dp"
                 android:text="выполненные мною события" />
         </LinearLayout>

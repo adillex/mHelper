@@ -42,7 +42,7 @@ import java.util.*
 
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM1 = "userId"
 private const val ARG_PARAM2 = "param2"
 
 /**
@@ -75,7 +75,7 @@ class myAccountFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            uid = it.getString("userId",null)
+            uid = it.getString(ARG_PARAM1,null)
         }
     }
 
@@ -182,11 +182,11 @@ class myAccountFragment : Fragment() {
     companion object {
 
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(uid:String) =
             myAccountFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putString(ARG_PARAM1, uid)
+
                 }
             }
     }
@@ -336,7 +336,7 @@ class myAccountFragment : Fragment() {
                         val selectedImage = BitmapFactory.decodeStream(imageStream)
                         actualProImagePath = getPathFromURI(imageUri)
 
-                        Glide.with(this).asBitmap().load(selectedImage).apply(RequestOptions.circleCropTransform()).thumbnail(0.1f).into(addPhoto)
+                       Glide.with(this).asBitmap().load(selectedImage).apply(RequestOptions.circleCropTransform()).thumbnail(0.1f).into(profileImage)
 
                     }
 
