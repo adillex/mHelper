@@ -26,5 +26,5 @@
 
  # восстановление
  
-![Alt tag](password recover.png)
-![Alt tag](password recover 2 .png)
+![Alt Tag](password recover.png)
+![Alt Tag](password recover 2 .png)
