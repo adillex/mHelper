@@ -73,6 +73,7 @@ class registrationFragment : Fragment() {
                         if (it.isSuccessful){
                             binding.progressBar.visibility = View.INVISIBLE
                             context?.let { it2 -> App.saveSharedPreferences(it2,"mail",binding.nameET.text.toString()) }
+                            activity?.finish()
                             startActivity(Intent(activity, MainActivity::class.java))
                         }else{
                             binding.progressBar.visibility = View.INVISIBLE

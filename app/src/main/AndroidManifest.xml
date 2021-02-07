@@ -22,20 +22,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyAccountActivity"></activity>
+        <activity android:name=".MyAccountActivity"/>
         <activity android:name=".HelpMapActivity" />
         <activity android:name=".RaitingBarActivity" />
         <activity android:name=".EventShowActivity" />
         <activity android:name=".recyclerViewActivity" />
-
-        <service
-            android:name=".MyServiceForMessages"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
 
         <provider
             android:name="androidx.core.content.FileProvider"

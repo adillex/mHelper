@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">m.helper</string>
     <string name="photo">добавить фото</string>
-    <string name="name">Почта</string>
+    <string name="name">Имя пользователя</string>
     <string name="Password">Пароль</string>
     <string name="PasswordCheck">Подтвердите пароль</string>
     <string name="EmailOrPhone">Email</string>

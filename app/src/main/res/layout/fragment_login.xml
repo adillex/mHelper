@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/border"
             android:ems="10"
-            android:hint="@string/name"
+            android:hint="@string/EmailOrPhone"
             android:inputType="textPersonName"
             android:padding="8dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"

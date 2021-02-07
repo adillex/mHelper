@@ -104,6 +104,10 @@ class EventShowActivity : AppCompatActivity() {
 //                            numArray = myRefUser?.child(mAuth?.uid!!)?.child("stars") as Array<Int>
 //                        }
 
+                        val intent = Intent(this@EventShowActivity, RaitingBarActivity::class.java)
+                        intent.putExtra("event", event)
+                        startActivity(intent)
+                        finish()
                     }
 
                 }else{//if(event?.workingStatus == 0)

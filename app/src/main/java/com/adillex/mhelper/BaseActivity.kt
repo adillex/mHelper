@@ -15,14 +15,13 @@ class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base)
         mAuth = FirebaseAuth.getInstance()
-    }
 
-    override fun onStart() {
-        super.onStart()
         val currentUser = mAuth!!.currentUser
         updateUI(currentUser)
     }
+
     private fun updateUI(currentUser : FirebaseUser?){
+        finish()
         if(currentUser == null){
             startActivity(Intent(this,LogInActivity::class.java))
         }else{
